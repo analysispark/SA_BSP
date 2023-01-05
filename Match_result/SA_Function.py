@@ -1,11 +1,7 @@
-
-from unittest import result
-import numpy as np
-import random
-import pandas as pd
-import scipy.stats as ss
-
 def SA_Index(dataframe, version):
+    import numpy as np
+    import pandas as pd
+    import scipy.stats as ss
     df = pd.DataFrame(dataframe.replace(np.nan, 0))
     C_AT = df["2P"]*0.87 + df["FT"]*0.84 + df['REB_OR']*0.93
     C_Def= df["REB_DF"]*0.87 + df["BS"]*0.84 + df["GD"]*0.76 + df["ST"]*0.60
@@ -29,18 +25,3 @@ def SA_Index(dataframe, version):
     return result_z
 
 
-def SA_Weight(dataframe, weight=[5,3,2]):
-    df = pd.DataFrame(np.nan_to_num(dataframe), columns=dataframe.columns)
-    var_list = ["C", "F", "G"]
-    
-    for i in var_list:
-        df[i+"_"+str(weight)]=df[i+"_AT"] * (weight[0] * 0.1)+\
-            df[i+"_Def"] * (weight[1] * 0.1) +\
-                df[i+"_PER"] * weight[2] * 0.1
-    return df
-
-
-def park_sample(df, n):
-    sample = random.sample(range(df.shape[0]), n)
-    
-    return df.iloc[sample,:]
