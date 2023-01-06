@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>Contact</title>
+<title>Result</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content=""> 
@@ -35,75 +35,86 @@
     <!-- header section start -->
     <div class="header_section">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="logo"><a href="index"><img src="{% static 'images/logo.png' %}"></a></div>
+        <div class="logo"><a href="index"><img src="{% static 'images/logo.png' %}" width="200" height="200"></a></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="calculator.html">CALCULATOR</a>
+            </li>
             <li class="nav-item active">
-              <a class="nav-link" href="index">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="trainings">TRAININGS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="classes">CLASSES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="shows">SHOWS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="shortcodes">SHORTCODES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact">CONTACT</a>
+              <a class="nav-link" href="result.html">RESULT</a>
             </li>
           </ul>                                          
-          <form class="form-inline my-2 my-lg-0">
-            <div class="search_icon"><a href="#"><img src="{% static 'images/search-icon.png' %}"></a></div>
-          </form>
         </div>
       </nav>
     </div>
     <!-- header section end -->
-    <title>Excel Calculate</title>
+    
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="page-header">
-                <a href="/" class="btn btn-default btn-xs" style="margin: 10px">메인화면</a>
-                <h1>Excel Calculate <small>with Django</small></h1>
-            </div>
+          <div class="page-header">
+            <div class="click_bt" style="margin: 10px"><a href="/">메인화면</a></div>
+            <br>
+            <br>
+            <hr>
+            <br>
+          </div>
+        </div>
+        <div class="small-header">
+          <h1> </h1>
+          <br>
+          <br>
+          <h1> </h1>
+          <br>
         </div>
         <div class='body'>
+          <div class="small-header">
+            <h1> </h1>
+            <hr>
+            <br>
+            <h1>체육특기자 경기력평가지표 <small>농구</small></h1>
+            <br>
+          </div>
             <div class="resultDiv">
-                <h3> * Excel 결과 확인 *</h3>
-                <h4> - grade별 최소값, 최대값, 평균값</h4>
+                <h3> * 경기력평가지표 결과 확인 *</h3>
+                <h4> - 포지션별 공격지표, 수비지표, 성공율지표</h4>
                 {% for key,value in grade_calculate_dic.items %}
                     <h5>GRADE: {{ key }}</h5>
-                    <p><strong>최소값: </strong>{{ value.min }}</p>
-                    <p><strong>최대값: </strong>{{ value.max }}</p>
-                    <p><strong>평균값: </strong>{{ value.avg }}</p>
+                    <p><strong>공격지표: </strong>{{ value.min }}</p>
+                    <p><strong>수비지표: </strong>{{ value.max }}</p>
+                    <p><strong>성공율지표: </strong>{{ value.avg }}</p>
                     <br>
                 {% endfor %}
                 <br>
-                <h4> - 이메일별 주소 도메인 인원</h4>
+                <h4> - 출전경기</h4>
                 {% for key,value in email_domain_dic.items %}
-                    <p><strong>{{ key }}: </strong>{{ value }}명</p>
+                    <p><strong>{{ key }}: </strong>{{ value }}분</p>
                 {% endfor %}
                 <br>
             </div>
             <hr>
         </div>
-        <div class="panel-footer">
-            실전예제로 배우는 Django. Project3-ExcelCalculate
-        </div>
     </div>
 </body>
 </html>
-
+<!-- copyright section start -->
+<div class="copyright_section">
+  <div class="container">
+    <p class="copyright_text">이 웹사이트는 <체육특기자 경기력평가지표 시뮬레이션 연구>를 위한 가상서버 입니다</a></p>
+  </div>
+</div>
+<!-- copyright section end -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
