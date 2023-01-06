@@ -42,16 +42,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">HOME</a>
+              <a class="nav-link" href="index">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">ABOUT</a>
+              <a class="nav-link" href="about">ABOUT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="calculator.html">CALCULATOR</a>
+              <a class="nav-link" href="calculator">CALCULATOR</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="result.html">RESULT</a>
+              <a class="nav-link" href="certify">RESULT</a>
             </li>
           </ul>                                          
         </div>
@@ -108,6 +108,26 @@
     </div>
 </body>
 </html>
+<!-- footer section start -->
+<div class="footer_section layout_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-lg-4">
+        <h1 class="adderss_text">Adderss</h1>
+        <div class="map_icon"><img src="{% static 'images/map-icon.png' %}"><span class="paddlin_left_0">134 Yongindaehak-ro Korea</span></div>
+        <div class="map_icon_1"><img src="{% static 'images/call-icon.png' %}"><span class="paddlin_left_0">+82 31 8020 3384<br></span></div>
+        <div class="map_icon"><img src="{% static 'images/mail-icon.png' %}"><span class="paddlin_left_0">analysispark@gmail.com</span></div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <h1 class="adderss_text">Contact</h1>
+        <div class="hiphop_text_1">Developer :<span style="text-align: right; float: right;"> Park Jihoon</span></div>
+        <div class="hiphop_text_1">Major :   <span style="text-align: right; float: right;"> Masurement &amp; Evaluation</span></div>
+        <div class="hiphop_text_1">Phone :   <span style="text-align: right; float: right;"> +82 10 9052 2604</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- footer section end -->
 <!-- copyright section start -->
 <div class="copyright_section">
   <div class="container">
@@ -116,16 +136,16 @@
 </div>
 <!-- copyright section end -->
     <!-- Javascript files-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/plugin.js"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+    <script src="{% static 'js/plugin.js' %}"></script>
     <!-- sidebar -->
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
     <!-- javascript --> 
-    <script src="js/owl.carousel.js"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
 </body>
 </html>

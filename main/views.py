@@ -7,7 +7,7 @@ def index(request):
 def about(request):
     return render(request, 'main/about.html')
 
-def result(request):
+def certify(request):
     return render(request, 'main/result.html')
 
 def calculator(request):

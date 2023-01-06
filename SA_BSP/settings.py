@@ -25,7 +25,7 @@ SECRET_KEY = 'y-i=+dhz32-1g5=3y5#pez-0rs_o4%!_i=!g_3p8gao&dxnbtz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['swrc.iptime.org:9000', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.stmp.EmailBackend'
