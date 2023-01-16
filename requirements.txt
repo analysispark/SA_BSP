@@ -1,0 +1,13 @@
+#git branch
+-main
+-develop
+--feature/mainpage
+--feature/calculator
+
+
+#module requirement
+django==3.0.11
+django-environ==0.4.5
+numpy==1.24.1
+pandas==1.5.2
+scipy==1.10.0
