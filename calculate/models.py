@@ -1,6 +1,12 @@
 from django.db import models
 
-# Create your models here.
+# sqlite3 db.sqlite3
+# .mode csv
+# .import TEST_UTF1.csv calculate_test
+
+## DELETE FROM calculate_test
+
+
 
 class TEST (models.Model):
 
