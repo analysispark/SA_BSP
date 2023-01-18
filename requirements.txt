@@ -3,6 +3,7 @@
 #-develop
 #--feature/mainpage
 #--feature/calculator
+#--feature/test
 
 #pytohn = 3.8
 #module requirement
