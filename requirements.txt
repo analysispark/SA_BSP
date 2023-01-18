@@ -1,10 +1,10 @@
-#git branch
--main
--develop
---feature/mainpage
---feature/calculator
+########git branch
+#-main
+#-develop
+#--feature/mainpage
+#--feature/calculator
 
-
+#pytohn = 3.8
 #module requirement
 django==3.0.11
 django-environ==0.4.5
