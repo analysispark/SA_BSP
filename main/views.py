@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+import pandas as pd
 
 # Create your views here.
 def index(request):
