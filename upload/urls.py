@@ -1,7 +1,8 @@
-#SA_BSP> sendEmail > urls.py
+#SA_BSP> upload > urls.py
 from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('', views.upload, name='upload_do')
             
 ]

@@ -8,7 +8,7 @@ from django.db import models
 
 
 
-class TEST (models.Model):
+class student(models.Model):
     match = models.CharField(max_length=255, null=True)
     game = models.CharField(max_length=10, null=True)
     team = models.CharField(max_length=150, null=True)
@@ -37,3 +37,9 @@ class TEST (models.Model):
     kpi_PF_TOT = models.FloatField(null=True)
     kpi_TO = models.FloatField(null=True)
     kpi_TF = models.FloatField(null=True)
+
+class park_test(models.Model):
+    match = models.CharField(max_length=10)
+    game = models.CharField(max_length=10)
+    team = models.CharField(max_length=20)
+    value = models.FloatField()
