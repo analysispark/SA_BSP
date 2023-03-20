@@ -28,5 +28,5 @@ def upload(request):
     # -----ToDo-----
     #
     # CSV 파일에서 model로 넘기기
-    return redirect('/result')
+    return redirect('/calculate')
     

@@ -34,7 +34,7 @@
         * 경기력평가지표 결과 확인 *</h3>
       <h4>
         - 포지션별 공격지표, 수비지표, 성공율지표</h4>
-      {% for key, value in grade_calculate_dic.items %}
+      {% for key, value in df.items %}
         <h5>GRADE:
           {{ key }}</h5>
         <p>
@@ -51,12 +51,12 @@
       <br>
       <h4>
         - 출전경기</h4>
-      {% for key, value in email_domain_dic.items %}
+      {% for key, value in df.items %}
         <p>
           <strong>{{ key }}:
           </strong>{{ value }}분</p>
       {% endfor %}
-      {{ content | safe }}
+      {{ df | safe }}
       <br>
     </div>
     <hr>
