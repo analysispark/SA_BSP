@@ -10,21 +10,29 @@ def about(request):
     return render(request, 'main/about.html')
 
 def calculate(request):
-    print('test log')
+    print('upload test log')
     qs = models.park_test.objects.all().values()
     data = pd.DataFrame(qs) 
     context = {'df': data.to_html(justify='center')}
     return render(request, 'main/calculator-2.html', context)
 
 def result(request):
-    # content = student.objects.all() 
-    # content = request.session
-    # del request.session
-    # content.save()
-    # return render(request, 'main/calculator-2.html', content)  
-    ## TEST
-    #qs = pd.read_csv('TEST_UTF1.csv')
+    print('result test log')
+    qs = models.student.objects.all().values()
+    data = pd.DataFrame(qs) 
+    data = data.head(50)
+    context = {'df': data.to_html(justify='center')}
+    return render(request, 'main/result.html', context)
+
+
+
+
+
+
+    #print('result test log')
+    #qs = models.student.objects.all().values()
     #data = pd.DataFrame(qs)
-    #content = {'df': data.to.html(justify='center')}
-    # 
-    return render(request, 'main/result.html')  
+    #data = data.head(10)
+    #print(data)
+    #content = {'df-2': data.to.html(justify='center')}
+    #return render(request, 'main/calculator-2.html', content)  

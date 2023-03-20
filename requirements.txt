@@ -11,3 +11,7 @@ django-environ==0.4.5
 numpy==1.24.1
 pandas==1.5.2
 scipy==1.10.0
+openpyxl==3.0.10
+django-excel==0.0.10
+pyexcel-xls==0.7.0
+pyexcel-xlsx==0.6.0
