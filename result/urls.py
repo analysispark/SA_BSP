@@ -3,5 +3,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-            
+    path('', views.SearchFormView.as_view(), name='searchform')
+      
 ]

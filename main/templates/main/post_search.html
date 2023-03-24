@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>체육특기자 선수 검색</h1>
+<br><br/>
+<h2>선수명을 입력해주세요</h2>
+<br><br/>
+
+<form action="." method="post"> {% csrf_token %}
+    {{ form.as_table }} <!-- form을 테이블 형식으로 표시, 여기서 form은 views에서 넘겨준 PostSearchForm 객체임-->
+    <input type="submit" value="Submit" class="btn btn-primary btn-sm">
+</form>
+
+<br/><br/>
+{{ df|safe }}
+{% endblock %}

@@ -6,7 +6,8 @@ urlpatterns = [
     path('', views.index, name='main_index'),
     path('index', views.index, name='main_index'),
     path('about', views.about, name='main_about'),
-    path('calculate', views.calculate, name='main_view'),
-    path('result', views.result, name='main_result'),
-    
+    path('calculate', views.calculate, name='main_calculate'),
+    #path('result2', views.result2, name='main_result'),
+    #path('SearchFormView', views.SearchFormView.as_view(), name='main_result'),
+
 ]

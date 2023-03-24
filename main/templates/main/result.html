@@ -2,64 +2,34 @@
 {% load static %}
 {% block content %}
 
-  <div class="container">
-    <div class="page-header">
-      <div class="click_bt" style="margin: 10px">
-        <a href="/">메인화면</a>
-      </div>
-      <br>
-      <br>
-      <hr>
-      <br>
-    </div>
-  </div>
-  <div class="small-header">
-    <h1>
-      <br>
-      <br>
-    </h1>
-  </div>
-  <div class='body'>
-    <div class="small-header">
-      <h1></h1>
-      <hr>
-      <br>
-      <h1>체육특기자 경기력평가지표
-        <small>농구</small>
-      </h1>
-      <br>
-    </div>
-    <div class="resultDiv">
-      <h3>
-        * 경기력평가지표 결과 확인 *</h3>
-      <h4>
-        - 포지션별 공격지표, 수비지표, 성공율지표</h4>
-      {% for key, value in df.items %}
-        <h5>GRADE:
-          {{ key }}</h5>
-        <p>
-          <strong>공격지표:
-          </strong>{{ value.min }}</p>
-        <p>
-          <strong>수비지표:
-          </strong>{{ value.max }}</p>
-        <p>
-          <strong>성공율지표:
-          </strong>{{ value.avg }}</p>
-        <br>
-      {% endfor %}
-      <br>
-      <h4>
-        - 출전경기</h4>
-      {% for key, value in df.items %}
-        <p>
-          <strong>{{ key }}:
-          </strong>{{ value }}분</p>
-      {% endfor %}
-      {{ df | safe }}
-      <br>
-    </div>
-    <hr>
-  </div>
-
+	<div class="container">
+		<div class="page-header">
+			<div class="click_bt" style="margin: 10px">
+		        <a href="/">출력하기</a>
+			</div>
+			<br>	
+			<br>
+			<hr>
+			<br>
+		</div>
+		
+		<div class = "result">
+			Search
+			<form method="get" action="{% url "main:search" %}">
+				<div>
+					<label for="name">Name</label>
+					<input value="{{name}}" id="name" name="name" placeholder="Search by Name" type="text">
+				</div>
+				<div>
+					<label for="country">Country</label>
+					<select id="country" name="country">
+						{% for country in countries %}
+						<option value="{{match.code}}">{{match.name}}</option>
+						{% endfor %}
+					</select>
+				</div>
+			<button>Search</button>
+			</form>
+		</div>
+	</div>
 {% endblock %}
