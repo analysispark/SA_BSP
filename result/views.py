@@ -22,3 +22,4 @@ class SearchFormView(FormView):
         #context['object_list'] = post_list
 
         return render(self.request, self.template_name, context)
+

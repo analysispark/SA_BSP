@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class='container-2'>
+ 	<form action="." method="get" id="search_mode">
+	
+		<div class="container-3">
+	
+			<select name="search_mode" id="search_mode">
+	
+				<option value="2022 춘계">2022 춘계</option>
+	
+				<option value="2022 협회장기">2022 협회장기</option>
+	
+				<option value="2022 연맹회장기">2022 연맹회장기</option>
+	
+				<option value="2022 테스트">2023 테스트</option>
+	
+			</select>
+	
+		</div>
+ 
+	</form>
+ 
+	<script type="text/javascript">
+ 
+		$(document).ready(function(){
+ 
+			$("select[name=search_mode]").val("{{ match_list }}")
+ 
+			$("select[name=search_mode]").change(function () {
+ 
+				$("#search_mode").submit();
+ 
+			});
+ 
+		});
+ 
+	</script>
+	
+</div>
+
+{% endblock %}

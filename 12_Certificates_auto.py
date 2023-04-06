@@ -20,9 +20,9 @@ sa_KPI_P = '99.22' #Percent
 
 # # for i in range(len(name)):
 
-doc = docx.Document(r'/mnt/d/Work/Python/django/SA_BSP/인증서 양식.docx')
+doc = docx.Document(r'/mnt/d/Work/Python/django/SA_BSP/인증서 양식2.docx')
 
-style = doc.styles['Normal']
+style = doc.Style['Normal']
 style.font.name = '나눔고딕'
 style._element.rPr.rFonts.set(qn('w:eastAisa'), '나눔고딕')
 style.font.size = docx.shared.Pt(10) # font size
@@ -132,8 +132,9 @@ def libreoffice_exec():
 convert_to('/mnt/d/Work/Python/django/SA_BSP/', "평가지표 증명서 자동생성 " + name + '.docx', timeout=15)
 
 #install
+#pip install python-docx
 #sudo add-apt-repository ppa:libreoffice/pp
 #sudo apt-get update
 #sudo apt-get upgrade
-#apt install libreoffice
-#apt install libreoffice-java-common
+#sudo apt install libreoffice
+#sudo apt install libreoffice-java-common

@@ -1,31 +1,163 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+	<head>
 
-  <body>
-    <h1>HEllO WORLD</h1>
-    	<form action="calculate/" method="get" id="search_mode">
-    		<div class="container-3">
-    			<select name="search_mode" id="search_mode">
-    				<option value="">대회 선택</option>
-    				<option value="2022 춘계">2022 춘계</option>
-    				<option value="2022 협회장기">2022 협회장기</option>
-    				<option value="2022 연맹회장기">2022 연맹회장기</option>
-    				<option value="2022 테스트">2023 테스트</option>
-    			</select>
-    		</div>
-    	</form>
-    	<script type="text/javascript">
-    		$(document).ready(function(){
-    			$("select[name=search_mode]").val("{{ match_list }}")
-    			$("select[name=search_mode]").change(function () {
-    			$("#search_mode").submit();
+		<!-- basic -->
+
+		<meta charset="utf-8" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=chrome" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- mobile metas -->
+
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+
+		<!-- site metas -->
+
+		<title>체육특기자 시뮬레이션</title>
+
+		<meta name="keywords" content="" />
+
+		<meta name="description" content="" />
+
+		<meta name="author" content="" />
+
+		<!-- bootstrap css -->
+
+		<link
+
+		rel="stylesheet"
+
+		type="text/css"
+
+		href="{% static 'css/bootstrap.min.css' %}"
+
+		/>
+
+		<!-- style css -->
+
+		<link
+
+		rel="stylesheet"
+
+		type="text/css"
+
+		href="{% static 'css/style.css' %}"
+
+		/>
+
+    
+<!-- header section start -->
+
+<div class="header_section">
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+		<div class="logo">
+
+			<a href="index"
+
+			><img src="{% static 'images/logo.png' %}" width="200" height="200"
+
+			/></a>
+
+		</div>
+
+		<button	class="navbar-toggler" type="button" data-toggle="collapse"	data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+			<ul class="navbar-nav mr-auto">
+
+				
+			
+				<li class="nav-item">
+
+
+					<a class="nav-link" href="{% url 'main_index' %}">HOME</a>
+
+			</li>
+
+			<li class="nav-item">
+
+				<a class="nav-link" href="{% url 'main_about' %}">ABOUT</a>
+
+			</li>
+
+			<li class="nav-item">
+
+				<a class="nav-link" href="{% url 'main_calculate' %}">UPLOAD</a>
+
+			</li>
+
+			<li class="nav-item">
+
+				<a class="nav-link" href="{% url 'searchform' %}"
+
+				>SEARCH & RESULT</a
+
+				>
+
+			</li>
+
+		</ul>
+
+	</div>
+
+</nav>
+
+</div>
+
+</head>
+<body>
+<div class="container">
+  <div class='content'>
+    <div class="fileInputDiv">
+            <form action="upload/" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                <div class="amet_text">
+                    하단 버튼을 통해 파일을 업로드 해주세요.(.xlsx 확장자의 파일만 가능합니다.)<br>
+                    <input id="fileInput" name="fileInput" type="file" class="form-control">
+                    <input type="submit" class="btn btn-success btn-lg" value="파일 제출">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class='container-2'>
+    <div class='content-2'>
+        <div class='amet_text'>
+            <br/><br/>
+            <h3>대회별 조회</h3>
+            <br/>   
+			<form action="." method="get" id="search_mode">
+				<div class="container-3">
+					<select name="search_mode" id="search_mode">
+						<option value="">선택</option>
+						<option value="2022 춘계">2022 춘계</option>
+						<option value="2022 협회장기">2022 협회장기</option>
+						<option value="2022 연맹회장기">2022 연맹회장기</option>
+					</select>
+				</div>
+    		</form>
+    		<script type="text/javascript">
+    			$(document).ready(function(){
+    				$("select[name=search_mode]").val("{{ match_list }}")
+    				$("select[name=search_mode]").change(function () {
+    				$("#search_mode").submit();
+    				});
     			});
-    		});
-    	</script>
-
-	{{ df|safe }}
-
-  </body>
-
+    		</script>
+		</div>
+    </div>
+</div>
+ 
+</body>
 </html>
