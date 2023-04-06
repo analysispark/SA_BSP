@@ -13,4 +13,15 @@
 
 <br/><br/>
 {{ df|safe }}
+
+<form action = "/result/{{result.id}}/" method="post">
+{% csrf_token %}
+    <button name="certi" value="{{result.id}}">
+        <a href = {% url 'certi_print' post.id %}">출력하기</a></button>
+
+</form>
+
+<!--<div class="click_bt" style="margin: 10px">-->
+<!--<a href="">출력하기</a></div>-->
+
 {% endblock %}

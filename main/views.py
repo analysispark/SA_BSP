@@ -21,15 +21,10 @@ def calculate(request):
     
     qs = student.objects.all().values()
     data = pd.DataFrame.from_records(qs)
-    
-    #print(data2.columns)
     qs_result = KPI_index(data)
-    #print(qs_result.head(10))
     
     engine = create_engine('sqlite:///db.sqlite3')
-    #data = pd.read_sql(sql=text('SELECT * FROM calculate_student'), con=engine.connect())
     qs_result.to_sql(result._meta.db_table, if_exists='replace', con=engine, index=True, index_label='id') 
-    
     
     return render(request, 'main/calculator.html')
 
@@ -61,6 +56,3 @@ def KPI_index(dataframe):
     result = pd.concat([df2['match'], df2['year'], df2['team'], df2['name'], result_z], axis=1)
     result.columns = ['match', 'year', 'team', 'name', 'Center_At', 'Center_Df', 'Center_Pr', 'Forward_At', 'Forward_Df', 'Forward_Pr', 'Guard_At', 'Guard_Df', 'Guard_Pr']
     return result
-
-    #return df
-    #return Center_At

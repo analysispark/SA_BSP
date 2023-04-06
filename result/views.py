@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import FormView
+from django.http import HttpResponse
 from result.models import result
 from django.db.models import Q
 import pandas as pd
@@ -16,10 +17,15 @@ class SearchFormView(FormView):
         post_list = result.objects.filter(Q(name__icontains=searchWord)).values()
         data = pd.DataFrame(post_list)
         context = {'df': data.to_html(justify='center')}
-        print(data.columns)
         #context['form'] = form
         #context['search_term'] = searchWord
         #context['object_list'] = post_list
 
         return render(self.request, self.template_name, context)
 
+def certi_print(reauest, result_id):
+    print("--test print log--")
+    poll = result.objects.get(pk = id)
+    selection = request.POST['certi']
+
+    return HttpResponse("finish")

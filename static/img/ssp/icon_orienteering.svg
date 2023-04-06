@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="59.309" height="59.309" viewBox="0 0 59.309 59.309">
+  <g id="그룹_9374" data-name="그룹 9374" transform="translate(-1190.429 -1597.498)">
+    <path id="패스_12365" data-name="패스 12365" d="M1220.084,1597.5a29.655,29.655,0,1,0,29.654,29.654A29.655,29.655,0,0,0,1220.084,1597.5Zm0,53.073a23.418,23.418,0,1,1,23.418-23.418A23.446,23.446,0,0,1,1220.084,1650.571Z" fill="#676767"/>
+    <path id="패스_12366" data-name="패스 12366" d="M1281.525,1760.531" transform="translate(-61.441 -109.96)" fill="#676767"/>
+    <path id="패스_12367" data-name="패스 12367" d="M1265,1639.787a.679.679,0,0,0-.824-.089l-18.662,11.344a.678.678,0,0,0-.246.258l-10.422,19.19a.681.681,0,0,0,.952.908l18.662-11.343a.652.652,0,0,0,.246-.258l10.422-19.19a.682.682,0,0,0-.128-.819Zm-25.4,26.669,6.985-12.86,5.524,5.26Zm0,0" transform="translate(-29.899 -28.395)" fill="#676767"/>
+    <g id="그룹_9373" data-name="그룹 9373" transform="translate(1192.553 1599.622)">
+      <g id="그룹_9371" data-name="그룹 9371" transform="translate(25.711)">
+        <rect id="사각형_3915" data-name="사각형 3915" width="3.637" height="10.433" rx="1.569" fill="#676767"/>
+        <rect id="사각형_3916" data-name="사각형 3916" width="3.637" height="10.432" rx="1.569" transform="translate(0 44.628)" fill="#676767"/>
+      </g>
+      <g id="그룹_9372" data-name="그룹 9372" transform="translate(0 25.711)">
+        <rect id="사각형_3917" data-name="사각형 3917" width="3.637" height="10.432" rx="1.569" transform="translate(0 3.637) rotate(-90)" fill="#676767"/>
+        <rect id="사각형_3918" data-name="사각형 3918" width="3.637" height="10.432" rx="1.569" transform="translate(44.628 3.637) rotate(-90)" fill="#676767"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -2,34 +2,35 @@
 {% load static %}
 {% block content %}
 
-	<div class="container">
-		<div class="page-header">
-			<div class="click_bt" style="margin: 10px">
-		        <a href="/">출력하기</a>
-			</div>
-			<br>	
-			<br>
-			<hr>
-			<br>
+<div class="container">
+	<div class="page-header">
+		<div class="click_bt" style="margin: 10px">
+	        <a href="/">출력하기</a>
 		</div>
-		
-		<div class = "result">
-			Search
-			<form method="get" action="{% url "main:search" %}">
-				<div>
-					<label for="name">Name</label>
-					<input value="{{name}}" id="name" name="name" placeholder="Search by Name" type="text">
-				</div>
-				<div>
-					<label for="country">Country</label>
-					<select id="country" name="country">
-						{% for country in countries %}
-						<option value="{{match.code}}">{{match.name}}</option>
-						{% endfor %}
-					</select>
-				</div>
-			<button>Search</button>
-			</form>
-		</div>
+		<br>	
+		<br>
+		<hr>
+		<br>
 	</div>
+	
+	<div class = "result">
+		Search
+		<form method="get" action="{% url "main:search" %}">
+			<div>
+				<label for="name">Name</label>
+				<input value="{{name}}" id="name" name="name" placeholder="Search by Name" type="text">
+			</div>
+			<div>
+				<label for="country">Country</label>
+				<select id="country" name="country">
+					{% for country in countries %}
+					<option value="{{match.code}}">{{match.name}}</option>
+					{% endfor %}
+				</select>
+			</div>
+		<button>Search</button>
+		</form>
+   	<div class="click_bt"></div><a href="certi_print">Print</a></div>
+	</div>
+</div>
 {% endblock %}
