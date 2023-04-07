@@ -23,9 +23,27 @@ class SearchFormView(FormView):
 
         return render(self.request, self.template_name, context)
 
-def certi_print(reauest, result_id):
-    print("--test print log--")
-    poll = result.objects.get(pk = id)
-    selection = request.POST['certi']
+#    def download_pdf(self, certi):
+#
+#        print('--download log--')
 
-    return HttpResponse("finish")
+#def certi_print(reauest, result_id):
+#    print("--test print log--")
+#    poll = result.objects.get(pk = id)
+#    selection = request.POST['certi']
+#
+#    return HttpResponse("finish")
+
+
+## result url, views, html ; certi_print 문제
+
+
+# post_serach.html
+#<div class="click_bt" style="margin: 10px">
+#    <a href="{% url 'download_pdf' %}">출력하기</a></div>
+
+
+#<form action = "." method="post"> {% csrf_token %}
+#    <button name="certi" value="{{df.id}}">
+#        <a href = {% url 'download_pdf' %}">출력하기</a></button>
+#</form>

@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import gettext as _
 # sqlite3 db.sqlite3
 # .mode csv
-# .import TEST_UTF1.csv calculate_test
+# .import ./Backup/dump.csv calculate_student
 
 ## DELETE FROM calculate_test
 

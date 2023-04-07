@@ -4,8 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.SearchFormView.as_view(), name='searchform'),
-    path('/<int:id>/', views.certi_print, name='certi_print'), 
+    #path('download_pdf/', views.SearchFormView.download_pdf, name='download_pdf'), 
 ]
 
 
-## result url, views, html ; certi_print 문제

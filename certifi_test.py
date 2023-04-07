@@ -15,18 +15,18 @@ doc = docx.Document(r'/mnt/d/Work/Python/django/SA_BSP/인증서 양식2.docx')
 
 game = '농구'  # 운동종목
 time = datetime.today().strftime("%Y.%m.%d")  # 발급날짜
-name = 'Park'
-birthday = '**1987-07-26**'
+name = '신승윤'
+birthday = '1957-03-02'
 school = '용인대학교'
-position = '**포지션**'
-sa_KPI_T = '98.82' #Total
-sa_KPI_A = '100' #Attack
-sa_KPI_D = '97.89' #Defence
-sa_KPI_P = '99.22' #Percent
+position = '가드'
+
+sa_KPI_A = '46.16' #Attack
+sa_KPI_D = '46.70' #Defence
+sa_KPI_P = '45.43' #Percent
 
 para = doc.add_paragraph()
 run = para.add_run('\n\n')
-run = para.add_run('제 2022-0001 호\n')
+run = para.add_run('제 2023-0001 호\n')
 run.font.name = '나눔고딕'
 run.font.size = Pt(12)
 para.alignment = WD_ALIGN_PARAGRAPH.LEFT
